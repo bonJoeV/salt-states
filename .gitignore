@@ -5,7 +5,6 @@
 *.pydevproject
 .project
 .metadata
-bin/
 tmp/
 *.tmp
 *.bak
@@ -196,7 +195,6 @@ dist/
 build/
 eggs/
 parts/
-var/
 sdist/
 develop-eggs/
 .installed.cfg
