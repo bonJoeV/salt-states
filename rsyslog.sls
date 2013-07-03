@@ -1,6 +1,6 @@
 /etc/rsyslog.conf:
     file.managed:
-        - source: salt://etc/rsyslog.jinja
+        - source: salt://files/etc/rsyslog.jinja
         - template: jinja
         - user: root
         - group: root

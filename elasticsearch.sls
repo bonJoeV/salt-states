@@ -18,7 +18,7 @@ elasticsearch:
 
 /etc/default/elasticsearch:
     file.managed:
-        - source: salt://etc/default/elasticsearch.jinja
+        - source: salt://files/etc/default/elasticsearch.jinja
         - template: jinja
         - required:
             - pkg: elasticsearch
@@ -26,7 +26,7 @@ elasticsearch:
 
 /etc/elasticsearch/elasticsearch.yml:
     file.managed:
-        - source: salt://etc/elasticsearch/elasticsearch.yml.jinja
+        - source: salt://files/etc/elasticsearch/elasticsearch.yml.jinja
         - template: jinja
         - user: elasticsearch
         - group: elasticsearch
@@ -37,7 +37,7 @@ elasticsearch:
 
 /etc/elasticsearch/logging.yml:
     file.managed:
-        - source: salt://etc/elasticsearch/logging.yml.jinja
+        - source: salt://files/etc/elasticsearch/logging.yml.jinja
         - template: jinja
         - user: elasticsearch
         - group: elasticsearch

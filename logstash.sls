@@ -28,7 +28,7 @@ logstash:
 {% for conf in logstash_confs %}
 /etc/logstash/conf.d/{{ conf }}.conf:
     file.managed:
-        - source: salt://etc/logstash/conf.d/{{ conf }}.jinja
+        - source: salt://files/etc/logstash/conf.d/{{ conf }}.jinja
         - template: jinja
         - user: logstash
         - group: logstash
@@ -40,7 +40,7 @@ logstash:
 {% for pattern in logstash_patterns %}
 /etc/logstash/patterns/{{ pattern }}:
     file.managed:
-        - source: salt://etc/logstash/patterns/{{ pattern }}.jinja
+        - source: salt://files/etc/logstash/patterns/{{ pattern }}.jinja
         - template: jinja
         - user: logstash
         - group: logstash

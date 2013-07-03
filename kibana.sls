@@ -5,7 +5,7 @@ ruby1.9.1-full:
 
 /bin/install_kibana.sh:
     file.managed:
-        - source: salt://bin/install_kibana.sh.jinja
+        - source: salt://files/bin/install_kibana.sh.jinja
         - template: jinja
         - mode: 755
         - group: root
@@ -31,7 +31,7 @@ kibana_install:
 
 /etc/init.d/kibana:
     file.managed:
-        - source: salt://etc/init.d/kibana.jinja
+        - source: salt://files/etc/init.d/kibana.jinja
         - template: jinja
         - user: root
         - group: root
@@ -40,5 +40,5 @@ kibana_install:
 
 /var/lib/kibana/KibanaConfig.rb:
     file.managed:
-        - source: salt://var/lib/kibana/KibanaConfig.rb.jinja
+        - source: salt://files/var/lib/kibana/KibanaConfig.rb.jinja
         - template: jinja
